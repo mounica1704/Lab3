@@ -1,0 +1,42 @@
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+   
+<div data-role="page" id="map_page">
+   <button id="clearBtn">clear storage</button>
+    <button id="storeBtn">store</button>
+    <button id="printBtn">print</button>
+    <div class="FormHeader"><b>Navigation Services By Mounica</b></div>
+        <div data-role="content">
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding: 1em;">
+                <div id="map_canvas" style="height: 300px;"></div>
+                <table border="0" cellpadding="0" cellspacing="2" width="100%">
+                    <tr>
+                        <td class="InputLabel" style="width: 25%;">From</td>
+                        <td class="InputArea">
+                            <input type="text" id="from" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td class="InputLabel" style="width: 25%;">To</td>
+                        <td class="InputArea">
+                            <input type="text" id="to" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td class="InputLabel" style="width: 25%;">Transportation method:</td>
+                        <td class="InputArea">
+                            <select name="select-choice-0" id="mode" class="InputLabel">
+                                <option value="DRIVING">Driving</option>
+                                <option value="WALKING">Walking</option>
+                                <option value="BICYCLING">Bicycling</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+  <a data-icon="search" data-role="button" href="#" id="submit" class="Default-Button-Style">Get directions</a>
+            </div>
+            <div id="results" style="display: none;">
+                <div id="directions"></div>
+            </div>
+ <footer>
+  <p>Posted by: Mounica Reddy Poondla</p>
+  
+</footer>

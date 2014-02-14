@@ -1,0 +1,109 @@
+$(document).on("pageinit", "#map_page", function () {
+            initialize();
+        });
+
+        $(document).on('click', '#submit', function (e) {
+            e.preventDefault();
+            calculateRoute();
+        });
+
+        var directionDisplay,
+            directionsService = new google.maps.DirectionsService(),
+            map;
+
+        function initialize() {
+            directionsDisplay = new google.maps.DirectionsRenderer();
+            var mapCenter = new google.maps.LatLng(39.1, -94.58);
+
+            var myOptions = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: mapCenter
+            }
+
+            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(document.getElementById("directions"));
+        }
+
+        function calculateRoute() {
+            var selectedMode = $("#mode").val(),
+                start = $("#from").val(),
+                end = $("#to").val();
+
+            if (start == '' || end == '') {
+                // cannot calculate route
+                $("#results").hide();
+                return;
+            }
+            else {
+                var request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.DirectionsTravelMode[selectedMode]
+                };
+
+                directionsService.route(request, function (response, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(response);
+                        $("#results").show();
+                       
+                    }
+                    else {
+                        $("#results").hide();
+                    }
+                });
+
+            }
+
+            $(".ui-loader ui-corner-all ui-body-a ui-loader-default").hide();
+        }
+
+        $(document).ready(function () {
+            $("h1").hide();
+        });
+
+var returnText = directionsService;
+var stores = Array();
+function clearStorage() {
+    //clear the storage
+    
+    localStorage.clear("database");
+}
+// save the string
+function saveStatusLocally() {
+   
+    var stringToSave = returnText;
+if ((stringToSave == null) || (stringToSave == "")){
+alert("nothing to store");
+} else {
+stores.push(stringToSave);
+
+window.localStorage.setItem("database", stores.join(" "));
+alert("data stored");
+       }
+}
+// read the string
+function readStatus() {
+    
+    if (window.localStorage.getItem("database") == null) {
+        alert("nothing stored");
+    } else {
+        var show = window.localStorage.getItem("database");
+        alert(show);
+    }
+}
+$( "#clearBtn" ).bind( "click", function(event, ui) {
+ clearStorage();
+  alert("storage cleared");
+});
+$("#storeBtn").bind("click", function(event, ui) {
+saveStatusLocally();
+
+});
+$("#printBtn").bind("click", function(event, ui) {
+readStatus();
+
+});
+
+

@@ -1,0 +1,16 @@
+function initialize() {
+    var myOptions = {
+        zoom: 5,
+        center: new google.maps.LatLng(34.04924594193164, -118.24104309082031),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var weather = new google.maps.weather.WeatherLayer({
+        temperatureUnits: google.maps.weather.TemperatureUnit.DEGREE //Temperature unit can also be changed to FAHRENHEIT by using the keyword "FAHRENHEIT"
+    });
+    weather.setMap(map);
+    var cloud = new google.maps.weather.CloudLayer();
+    cloud.setMap(map); //Comment out this line if you do not wish to
+     var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+}
