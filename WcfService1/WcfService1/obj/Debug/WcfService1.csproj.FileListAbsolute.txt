@@ -1,0 +1,15 @@
+\\kc.umkc.edu\kc-users\home\f\fsm89\my documents\visual studio 2010\Projects\WcfService1\WcfService1\bin\WcfService1.dll
+\\kc.umkc.edu\kc-users\home\f\fsm89\my documents\visual studio 2010\Projects\WcfService1\WcfService1\bin\WcfService1.pdb
+\\kc.umkc.edu\kc-users\home\f\fsm89\my documents\visual studio 2010\Projects\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+\\kc.umkc.edu\kc-users\home\f\fsm89\my documents\visual studio 2010\Projects\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+\\kc.umkc.edu\kc-users\home\f\fsm89\My Documents\Visual Studio 2010\Projects\WcfService1\WcfService1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sriharsha\Desktop\WcfService1\WcfService1\bin\WcfService1.dll
+C:\Users\Sriharsha\Desktop\WcfService1\WcfService1\bin\WcfService1.pdb
+C:\Users\Sriharsha\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\Sriharsha\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\Sriharsha\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\MounicaReddy\Desktop\WcfService1\WcfService1\bin\WcfService1.dll
+C:\Users\MounicaReddy\Desktop\WcfService1\WcfService1\bin\WcfService1.pdb
+C:\Users\MounicaReddy\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\MounicaReddy\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\MounicaReddy\Desktop\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
